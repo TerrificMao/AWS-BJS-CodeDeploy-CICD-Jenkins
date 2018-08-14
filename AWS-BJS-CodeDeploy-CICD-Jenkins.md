@@ -102,6 +102,20 @@ Result: The AWS CodeDeploy agent is running as PID 3523
 
 安装如何脚本安装Jenkins，默认Java的环境是1.7的，可以先升级到Java 1.8版本。
 
+```bash
+sudo -s
+java –version
+yum install java-1.8.0
+yum remove java-1.7.0-openjdk
+wget -O /etc/yum.repos.d/jenkins.repo http://jenkins-ci.org/redhat/jenkins.repo
+rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
+yum install jenkins
+chkconfig jenkins on
+service jenkins start
+//查看Jenkins默认密码
+cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
 在浏览器输入输入EC2的公网IP地址（最好绑定一个弹性EIP），比如54.223.215.xx:8080，然后出现如下界面，输入上面得到的默认密码。
 
 ![img](assets/16.png)
