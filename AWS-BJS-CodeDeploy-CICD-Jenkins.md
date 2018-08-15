@@ -8,6 +8,10 @@ AWS DevOps - 配合Jenkins和CodeDeploy实现代码自动化部署
 
 <https://aws.amazon.com/cn/blogs/china/getting-started-with-codedeploy/>  
 
+自动化部署解决方案
+
+![img](assets/AWS-DevOps.png)
+
 ## 一、创建EC2实例并安装CodeDeploy Agent
 
 创建Amazon EC2实例，选择实例类型和添加存储。
